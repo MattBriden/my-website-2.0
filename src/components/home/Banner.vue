@@ -1,9 +1,9 @@
 <template>
   <div id="banner">
-    <NavBar></NavBar>
+    <NavBar :scrollTo="scrollTo"></NavBar>
     <div class="home-text">
       <p>
-        Reliable and Quality Software
+        Full Stack Solutions
       </p>
       <p>
         For Your Cloud Computing Needs
@@ -26,7 +26,7 @@ export default {
 
 <style>
 #banner {
-  background: url('~@/assets/home-image.jpg') no-repeat center center;
+  background: url('~@/assets/IMG_2740.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -36,7 +36,7 @@ export default {
 }
 .home-text {
   color: white;
-  bottom: 110px;
+  bottom: 180px;
   position: absolute;
   width: 100%;
   font-size: 40px;
@@ -51,5 +51,34 @@ export default {
 
 .home-text p {
   margin: 0;
+}
+@keyframes fadein {
+  0% { opacity:0; }
+  45% { opacity:0; }
+  100% { opacity:1; }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  0% { opacity:0; }
+  45% { opacity:0; }
+  100% { opacity:1; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  0% { opacity:0; }
+  45% { opacity:0; }
+  100% { opacity:1; }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  0% { opacity:0; }
+  45% { opacity:0; }
+  100% { opacity:1; }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  0% { opacity:0; }
+  45% { opacity:0; }
+  100% { opacity:1; }
 }
 </style>

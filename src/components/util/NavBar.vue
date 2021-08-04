@@ -1,36 +1,52 @@
 <template>
-  <div id="navbar" ref="navbar" :class="{change_bgcolor: scrollPosition > 100}">
+  <div id="navbar" ref="navbar" :class="{change_bgcolor: scrollPosition > 100 || this.showMobileNav}">
     <div class="logo">
 <!--      <img src="~@/assets/amenity-match-logo.svg" height="50px"/>-->
     </div>
-    <div class="navbar" :class="{change_txtcolor: scrollPosition > 100}">
-      <font-awesome-icon v-if="onMobile" icon="bars" size="2x" :style="{ color: 'white', 'margin-top': '10px', 'margin-right': '15px' }" @click="toggleDropdown"/>
+    <div class="navbar" :class="{change_txtcolor: scrollPosition > 100 || this.showMobileNav}">
+      <font-awesome-icon v-if="onMobile" icon="bars" size="2x" :class="{black_bars: scrollPosition > 100 || this.showMobileNav, white_bars: scrollPosition <= 100 && !this.showMobileNav}" :style="{ 'margin-top': '10px', 'margin-right': '15px' }" @click="toggleDropdown"/>
       <ul class="desktop-nav" v-else>
         <li>
-          <router-link to="/" :class="{change_txtcolor: scrollPosition > 100}"><strong>Home</strong></router-link>
+          <a @click="scrollTo('home', 0)" :class="{change_txtcolor: scrollPosition > 100}"><span>Home</span></a>
         </li>
-        <strong>|</strong>
+        <span>|</span>
         <li>
-          <a :class="{change_txtcolor: scrollPosition > 100}"><strong>About</strong></a>
+          <a @click="scrollTo('about', -50)" :class="{change_txtcolor: scrollPosition > 100}"><span>About</span></a>
         </li>
-        <strong>|</strong>
+        <span>|</span>
         <li>
-          <a :class="{change_txtcolor: scrollPosition > 100}"><strong>Contact Us</strong></a>
+          <a @click="scrollTo('portfolio', -50)" :class="{change_txtcolor: scrollPosition > 100}"><span>Portfolio</span></a>
         </li>
-        <strong>|</strong>
+        <span>|</span>
         <li>
-          <router-link to="/blog" :class="{change_txtcolor: scrollPosition > 100}"><strong>Development Blog</strong></router-link>
+          <a @click="scrollTo('contact-us', -50)" :class="{change_txtcolor: scrollPosition > 100}"><span>Contact Us</span></a>
+        </li>
+        <span>|</span>
+        <li>
+          <router-link to="/blog" :class="{change_txtcolor: scrollPosition > 100}"><span>Development Blog</span></router-link>
         </li>
       </ul>
     </div>
     <div class="mobile" v-if="showMobileNav">
-      <ul class="mobile-nav">
+      <ul class="mobile-nav" ref="mobile-nav">
         <li>
-          <router-link to="/">Home</router-link>
+          <a @click="scrollTo('home')"><span>Home</span></a>
         </li>
         <hr/>
         <li>
-          <router-link to="/blog">Development Blog</router-link>
+          <a @click="scrollTo('about', -50)"><span>About</span></a>
+        </li>
+        <hr/>
+        <li>
+          <a @click="scrollTo('portfolio', -50)"><span>Portfolio</span></a>
+        </li>
+        <hr/>
+        <li>
+          <a @click="scrollTo('contact-us', -50)"><span>Contact Us</span></a>
+        </li>
+        <hr/>
+        <li>
+          <router-link to="/blog"><span>Development Blog</span></router-link>
         </li>
       </ul>
     </div>
@@ -60,6 +76,13 @@ export default {
     },
     updateScroll() {
       this.scrollPosition = window.scrollY;
+    },
+    scrollTo(id, yOffset) {
+      const el = document.getElementById(id);
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      if (el) {
+        window.scrollTo({top: y, behavior: 'smooth'});
+      }
     }
   },
   mounted() {
@@ -86,6 +109,12 @@ export default {
   margin-left: 40px;
   margin-top: 25px;
 }
+.black_bars {
+  color: black;
+}
+.white_bars {
+  color: white;
+}
 .navbar {
   float: right;
   color: white;
@@ -109,9 +138,16 @@ export default {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.mobile-nav span {
+  color: black;
+}
 .mobile {
   margin-top: 82px;
   width: 100%;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 li {
   display: inline;
@@ -120,6 +156,7 @@ li {
 a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
   margin-right: 10px;
   font-size: 20px;
   -moz-transition: all .3s ease-in;

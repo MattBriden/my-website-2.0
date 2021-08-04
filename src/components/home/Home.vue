@@ -1,26 +1,26 @@
 <template>
   <div id="home">
     <Banner></Banner>
-    <v-footer padless>
-      <v-col
-          class="text-center"
-          cols="12"
-      >
-        <hr/>
-        &#169; {{ new Date().getFullYear() }} | All Rights Reserved | Briden Solutions LLC
-      </v-col>
-    </v-footer>
+    <About></About>
+    <Portfolio></Portfolio>
+    <ContactUs></ContactUs>
   </div>
 
 </template>
 
 <script>
-import Banner from '@/components/home/Banner'
+import Banner from '@/components/home/Banner';
+import About from '@/components/home/About';
+import ContactUs from '@/components/home/ContactUs';
+import Portfolio from "@/components/home/Portfolio";
 
 export default {
   name: 'Home',
   components: {
-    Banner
+    Banner,
+    About,
+    Portfolio,
+    ContactUs
   }
 }
 </script>
@@ -34,8 +34,5 @@ export default {
 }
 body {
   margin: 0;
-}
-v-col {
-  padding-bottom: 20px;
 }
 </style>

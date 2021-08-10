@@ -3,21 +3,21 @@
     <div class="about-text">
       <h2>Why Helios?</h2>
       <p>
-        Helios is the Greek god that charioted the sun across the sky. <strong>At Helios we believe that your software should be as reliable and worry-free as the sun rising every morning.</strong> We strive to architect and execute solutions based on your needs so you can produce the best product possible for your customers.
+        Helios is the Greek god that charioted the sun across the sky. <strong>At Helios we believe that your software should be as reliable and worry-free as the sun rising every morning.</strong> We strive to architect and execute solutions based on your needs so you can provide the best product possible for your customers.
       </p>
     </div>
     <div class="icons">
       <ul>
         <li id="up-to-date" v-observe-visibility="visibilityChanged" :class="{up_to_date: upToDateSeen == true}">
-          <font-awesome-icon icon="sun" size="4x" :style="{ color: '#D4AC0D' }"/>
+          <font-awesome-icon icon="sun" size="5x" :style="{ color: '#D4AC0D' }"/>
           <span>Reliable</span>
         </li>
         <li id="finds-clients" v-observe-visibility="visibilityChanged" :class="{finds_clients: findsClientsSeen == true}">
-          <font-awesome-icon icon="chart-line" size="4x" :style="{ color: '#196F3D' }"/>
+          <font-awesome-icon icon="chart-line" size="5x" :style="{ color: '#196F3D' }"/>
           <span>Scalable</span>
         </li>
         <li id="saves-money" v-observe-visibility="visibilityChanged" :class="{saves_money: savesMoneySeen == true}">
-          <font-awesome-icon icon="fire" size="4x" :style="{ color: '#DC7633' }"/>
+          <font-awesome-icon icon="fire" size="5x" :style="{ color: '#DC7633' }"/>
           <span>Cutting Edge</span>
         </li>
       </ul>
@@ -54,7 +54,7 @@ export default {
 <style scoped>
 #about {
   padding-top: 50px;
-  background-color: rgba(222, 222, 222, 0.99);
+  background-color: #e1e1e1;
 }
 .about-text {
   margin-right: 15%;
@@ -67,7 +67,7 @@ export default {
 .about-text p {
   text-align: center;
   margin: 0;
-  font-size: 20px;
+  font-size: 25px;
 }
 .icons {
   width: 100%;
@@ -75,6 +75,7 @@ export default {
 .icons ul {
   justify-content: center;
   display: flex;
+  margin: unset;
 }
 .icons li {
   padding-top: 50px;

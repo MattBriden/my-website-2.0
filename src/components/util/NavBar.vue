@@ -1,7 +1,8 @@
 <template>
   <div id="navbar" ref="navbar" :class="{change_bgcolor: scrollPosition > 100 || this.showMobileNav}">
     <div class="logo">
-<!--      <img src="~@/assets/amenity-match-logo.svg" height="50px"/>-->
+      <img v-if="scrollPosition > 100" src="~@/assets/SVGLogo.svg" height="50px"/>
+      <img v-else src="~@/assets/SVGLogo_white.svg" height="50px"/>
     </div>
     <div class="navbar" :class="{change_txtcolor: scrollPosition > 100 || this.showMobileNav}">
       <font-awesome-icon v-if="onMobile" icon="bars" size="2x" :class="{black_bars: scrollPosition > 100 || this.showMobileNav, white_bars: scrollPosition <= 100 && !this.showMobileNav}" :style="{ 'margin-top': '10px', 'margin-right': '15px' }" @click="toggleDropdown"/>
@@ -23,7 +24,7 @@
         </li>
         <span>|</span>
         <li>
-          <router-link to="/blog" :class="{change_txtcolor: scrollPosition > 100}"><span>Development Blog</span></router-link>
+          <a target="_blank" href="https://mattbriden.com" :class="{change_txtcolor: scrollPosition > 100}"><span>Development Blog</span></a>
         </li>
       </ul>
     </div>
@@ -46,7 +47,7 @@
         </li>
         <hr/>
         <li>
-          <router-link to="/blog"><span>Development Blog</span></router-link>
+          <a target="_blank" href="https://mattbriden.com"><span>Development Blog</span></a>
         </li>
       </ul>
     </div>
@@ -106,8 +107,8 @@ export default {
 }
 .logo {
   float: left;
-  margin-left: 40px;
-  margin-top: 25px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 .black_bars {
   color: black;

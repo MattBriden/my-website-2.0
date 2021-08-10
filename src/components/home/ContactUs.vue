@@ -89,10 +89,10 @@ export default {
 
 <style scoped>
 #contact-us {
-  background-color: #313030;
+  background-color: #e1e1e1;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: white;
+  color: black;
 }
 p {
   margin: 0;

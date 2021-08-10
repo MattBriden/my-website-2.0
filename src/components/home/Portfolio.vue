@@ -1,70 +1,62 @@
 <template>
   <div id="portfolio">
+    <div class="wrapper">
     <h1>Featured Projects</h1>
       <div class="featured-projects">
-        <div class="am-project" @mouseenter="mouseOver('am-info', true)" @mouseleave="mouseOver('am-info', false)">
+        <div class="am-project">
           <div id="am-info" class="info">
             <h2>Amenity Match</h2>
-            <h3>Spring Boot / Vue.js / AWS</h3>
+            <h3>Spring Boot / Vue.js / PostgreSQL / AWS</h3>
             <div class="view-site">
-              <a href="#">View Site</a>
+              <a target="_blank" href="https://www.amenitymatch.com/">Learn More</a>
             </div>
           </div>
           <img src="~@/assets/amenity-match-logo.svg" height="150px"/>
         </div>
-        <div class="project" @mouseenter="mouseOver('fg-info', true)" @mouseleave="mouseOver('fg-info', false)">
+        <div class="fg-project">
           <div id="fg-info" class="info">
             <h2>FileGenius</h2>
-            <h3>AWS Lambda Functions / Python / React</h3>
+            <h3>AWS Lambda Functions / Python / Terraform / React</h3>
             <div class="view-site">
-              <a href="#">View Site</a>
+              <a target="_blank" href="https://www.filegenius.com/">Learn More</a>
             </div>
           </div>
           <img src="~@/assets/file-genius-logo.png" height="250px"/>
         </div>
-        <div class="project">
-          <div class="info" v-if="fg2Hovered">
-            <h2>FileGenius</h2>
-            <h3>AWS Lambda Functions / Python / React</h3>
+        <div class="symbio-project">
+          <div id="symbio-info" class="info">
+            <h2>Proofpoint</h2>
+            <h3>Ember.js / Spring Boot / AWS StepFunctions</h3>
             <div class="view-site">
-              <a href="#">View Site</a>
+              <a target="_blank" href="https://www.proofpoint.com/us">Learn More</a>
             </div>
           </div>
-          <img src="~@/assets/file-genius-logo.png" height="250px"/>
+          <img src="~@/assets/proofpoint-logo.png" height="100px"/>
         </div>
       </div>
+    </div>
   </div>
 
 </template>
 
 <script>
 export default {
-  name: 'Portfolio',
-  data() {
-    return {
-      amHovered: false,
-      fgHovered: false,
-      fg2Hovered: false
-    }
-  },
-  methods: {
-    mouseOver(project, enter) {
-      let el = document.getElementById(project);
-        if (enter) {
-          el.style.display = 'block';
-        } else {
-          el.style.display = 'none';
-      }
-    }
-  }
+  name: 'Portfolio'
 }
 </script>
 
 <style scoped>
 #portfolio {
   padding-top: 40px;
-  background-color: #ffffff;
+  background-color: #e1e1e1;
   padding-bottom: 40px
+}
+
+.wrapper {
+  background-color: white;
+  border-radius: 25px;
+  margin: 40px;
+  padding: 40px;
 }
 
 .featured-projects {
@@ -73,29 +65,54 @@ export default {
   margin: 5px;
 }
 
-.project, .am-project {
+.fg-project, .am-project, .symbio-project {
   grid-column: span 4;
   position: relative;
+  border-radius: 25px;
+  border: solid thin gray;
+  margin: 15px;
+  height: 258px;
+}
+
+.am-project {
+  background-color: rgba(230, 250, 250, 0.97);
+}
+
+.fg-project {
+  background-color: white;
+}
+
+.symbio-project {
+  background-color: black;
 }
 
 .am-project img {
   padding-top: 37px;
 }
 
+.symbio-project img {
+  padding-top: 70px;
+}
+
+.featured-projects img {
+  max-width: 100%;
+}
+
 .info {
-  background-color: rgba(0,0,0,0.8);
+  background-color: black;
+  border-radius: 25px;
   position: absolute;
   height: 100%;
   width: 100%;
   color: white;
-  display: none;
-
-  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 1s; /* Firefox < 16 */
-  -ms-animation: fadein 1s; /* Internet Explorer */
-  -o-animation: fadein 1s; /* Opera < 12.1 */
-  animation: fadein 1s;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
+
+.info:hover {
+  opacity: 0.8;
+}
+
 .info .view-site {
   padding-top: 35px;
 }
@@ -112,37 +129,8 @@ export default {
   border: thick solid white;
   font-weight: bold;
 }
-@keyframes fadein {
-  0% { opacity: 0; }
-  45% { opacity: 0; }
-  100% { opacity: 1; }
-}
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-  0% { opacity: 0; }
-  45% { opacity: 0; }
-  100% { opacity: 1; }
-}
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-  0% { opacity: 0; }
-  45% { opacity: 0; }
-  100% { opacity: 1; }
-}
-/* Internet Explorer */
-@-ms-keyframes fadein {
-  0% { opacity: 0; }
-  45% { opacity: 0; }
-  100% { opacity: 1; }
-}
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-  0% { opacity: 0; }
-  45% { opacity: 0; }
-  100% { opacity: 1; }
-}
 @media screen and (max-width: 600px) {
-  .project, .am-project {
+  .fg-project, .symbio-project, .am-project {
     grid-column: span 12;
   }
 }

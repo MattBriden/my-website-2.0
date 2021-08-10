@@ -133,5 +133,9 @@ export default {
   .fg-project, .symbio-project, .am-project {
     grid-column: span 12;
   }
+  .wrapper {
+    padding: 15px;
+    margin: 15px;
+  }
 }
 </style>

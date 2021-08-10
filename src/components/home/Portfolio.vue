@@ -137,5 +137,9 @@ export default {
     padding: 15px;
     margin: 15px;
   }
+
+  .info:hover {
+    opacity: 0;
+  }
 }
 </style>

@@ -27,7 +27,7 @@ export default {
 
 <style>
 #banner {
-  background: url('~@/assets/IMG_2740.jpg') no-repeat center center;
+  background: url('~@/assets/background_2.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -84,5 +84,10 @@ export default {
   0% { opacity:0; }
   45% { opacity:0; }
   100% { opacity:1; }
+}
+@media screen and (max-width: 600px) {
+  .home-text {
+    bottom: 10%;
+  }
 }
 </style>

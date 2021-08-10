@@ -81,7 +81,7 @@ export default {
       const el = document.getElementById(id);
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       if (el) {
-        window.scrollTo({top: y, behavior: 'smooth'});
+        setTimeout(window.scrollTo({top: y, behavior: 'smooth'}), 0);
       }
     }
   },

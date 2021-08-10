@@ -2,7 +2,6 @@
   <div id="navbar" ref="navbar" :class="{change_bgcolor: scrollPosition > 100 || this.showMobileNav}">
     <div class="logo">
       <img v-if="scrollPosition > 100" src="~@/assets/SVGLogo.svg" height="50px"/>
-      <img v-else src="~@/assets/SVGLogo_white.svg" height="50px"/>
     </div>
     <div class="navbar" :class="{change_txtcolor: scrollPosition > 100 || this.showMobileNav}">
       <font-awesome-icon v-if="onMobile" icon="bars" size="2x" :class="{black_bars: scrollPosition > 100 || this.showMobileNav, white_bars: scrollPosition <= 100 && !this.showMobileNav}" :style="{ 'margin-top': '10px', 'margin-right': '15px' }" @click="toggleDropdown"/>

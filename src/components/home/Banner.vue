@@ -2,7 +2,8 @@
   <div id="banner">
     <NavBar :scrollTo="scrollTo"></NavBar>
     <div class="home-text">
-      <p>
+      <img src="~@/assets/SVGLogo_white.svg" height="350px"/>
+      <p class="first-line">
         Full Stack Solutions
       </p>
       <p>
@@ -39,7 +40,7 @@ export default {
   bottom: 180px;
   position: absolute;
   width: 100%;
-  font-size: 40px;
+  font-size: 30px;
   z-index: 1;
 
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -49,6 +50,9 @@ export default {
   animation: fadein 2s;
 }
 
+.home-text .first-line {
+  padding-top: 25px;
+}
 .home-text p {
   margin: 0;
 }

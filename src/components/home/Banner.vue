@@ -37,7 +37,7 @@ export default {
 }
 .home-text {
   color: white;
-  bottom: 180px;
+  bottom: 15%;
   position: absolute;
   width: 100%;
   font-size: 30px;

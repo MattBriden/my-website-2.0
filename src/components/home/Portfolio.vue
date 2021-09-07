@@ -25,13 +25,13 @@
         </div>
         <div class="symbio-project" @click="toggleInfo('symbio-info')">
           <div id="symbio-info" class="mobile-info">
-            <h2>Proofpoint</h2>
-            <h3>Ember.js / Spring Boot / AWS StepFunctions</h3>
+            <h2>Parti</h2>
+            <h3>AWS Consultation / AWS AppSync / Aurora Serverless</h3>
             <div class="view-site">
-              <a target="_blank" href="https://www.proofpoint.com/us">Learn More</a>
+              <a target="_blank" href="https://partiofficial.com/services">Learn More</a>
             </div>
           </div>
-          <img src="~@/assets/proofpoint-logo.png" height="100px"/>
+          <img src="~@/assets/parti-logo.png" height="100px"/>
         </div>
       </div>
       <div v-else class="featured-projects">
@@ -57,13 +57,13 @@
         </div>
         <div class="symbio-project">
           <div class="info">
-            <h2>Proofpoint</h2>
-            <h3>Ember.js / Spring Boot / AWS StepFunctions</h3>
+            <h2>Parti</h2>
+            <h3>AWS Consultation / AWS AppSync</h3>
             <div class="view-site">
-              <a target="_blank" href="https://www.proofpoint.com/us">Learn More</a>
+              <a target="_blank" href="https://partiofficial.com/services">Learn More</a>
             </div>
           </div>
-          <img src="~@/assets/proofpoint-logo.png" height="100px"/>
+          <img src="~@/assets/parti-logo.png" height="100px"/>
         </div>
       </div>
     </div>
@@ -170,6 +170,10 @@ export default {
   opacity: 0.8;
 }
 
+.info h3 {
+  padding: 10px;
+}
+
 .info .view-site, .mobile-info .view-site {
   padding-top: 35px;
 }
@@ -239,7 +243,7 @@ export default {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .fg-project, .symbio-project, .am-project {
     grid-column: span 12;
   }

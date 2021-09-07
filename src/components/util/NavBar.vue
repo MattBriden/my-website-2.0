@@ -177,6 +177,7 @@ button {
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
   background-color: white;
+  border-bottom: thin solid black;
 }
 .change_txtcolor {
   -moz-transition: all .3s ease-in;

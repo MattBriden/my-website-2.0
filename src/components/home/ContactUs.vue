@@ -69,8 +69,8 @@ export default {
         this.$notify({
           type: 'error',
           title: 'Error Sending Email',
-          text: 'We aplogize for the inconvenience but there was an error while processing your message.' +
-              'Please send an email to admin@amenitymatch.com for assistance.'
+          text: 'We apologize for the inconvenience but there was an error while processing your message.' +
+              'Please send an email to mattbridensoftware@gmail.com for assistance.'
         });
       }
 
@@ -80,7 +80,7 @@ export default {
       this.$notify({
         type: 'success',
         title: 'Thank you for your email!',
-        text: 'Someone from the Amenity Match team will reach out to you shortly.'
+        text: 'Someone from the Helios team will reach out to you shortly.'
       });
     },
   }

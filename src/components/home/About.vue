@@ -3,7 +3,7 @@
     <div class="about-text">
       <h2>Why Helios?</h2>
       <p>
-        Helios is the Greek god that charioted the sun across the sky. <strong>At Helios we believe that your software should be as reliable and worry-free as the sun rising every morning.</strong> We strive to architect and execute solutions based on your needs so you can provide the best product possible for your customers. From <strong>custom software development to cloud architecture</strong> trust Helios to design and build your next project.
+        Helios is the Greek god that charioted the sun across the sky. <strong>At Helios we believe that your software should be as reliable and worry-free as the sun rising every morning.</strong> We strive to architect and execute solutions based on your needs so you can provide the best product possible for your customers.
       </p>
     </div>
     <div class="icons">
@@ -18,7 +18,7 @@
         </li>
         <li id="saves-money" v-observe-visibility="visibilityChanged" :class="{saves_money: savesMoneySeen == true}">
           <font-awesome-icon icon="fire" size="5x" :style="{ color: '#75ab38' }"/>
-          <span>Burning Edge</span>
+          <span>Bleeding Edge</span>
         </li>
       </ul>
     </div>
@@ -53,7 +53,6 @@ export default {
 
 <style scoped>
 #about {
-  padding-top: 50px;
   background-color: #e1e1e1;
 }
 .about-text {
@@ -63,6 +62,7 @@ export default {
 }
 .about-text h2 {
   color: black;
+  margin-top: unset;
 }
 .about-text p {
   text-align: center;

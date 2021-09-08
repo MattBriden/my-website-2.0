@@ -11,7 +11,11 @@
         </li>
         <span>|</span>
         <li>
-          <a @click="scrollTo('about', -50)" :class="{change_txtcolor: scrollPosition > 100}"><span>About</span></a>
+          <a @click="scrollTo('services', -50)" :class="{change_txtcolor: scrollPosition > 100}"><span>Services</span></a>
+        </li>
+        <span>|</span>
+        <li>
+          <a @click="scrollTo('about', -100)" :class="{change_txtcolor: scrollPosition > 100}"><span>About</span></a>
         </li>
         <span>|</span>
         <li>
@@ -34,7 +38,11 @@
         </li>
         <hr/>
         <li>
-          <a @click="scrollTo('about', -50)"><span>About</span></a>
+          <a @click="scrollTo('services', -50)"><span>Services</span></a>
+        </li>
+        <hr/>
+        <li>
+          <a @click="scrollTo('about', -100)"><span>About</span></a>
         </li>
         <hr/>
         <li>
@@ -69,7 +77,7 @@ export default {
   },
   methods: {
     updateSize() {
-      this.onMobile = window.innerWidth <= 900;
+      this.onMobile = window.innerWidth <= 1010;
     },
     toggleDropdown() {
       this.showMobileNav = !this.showMobileNav;
@@ -82,6 +90,7 @@ export default {
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       if (el) {
         setTimeout(window.scrollTo({top: y, behavior: 'smooth'}), 0);
+        this.toggleDropdown();
       }
     }
   },
@@ -111,9 +120,11 @@ export default {
 }
 .black_bars {
   color: black;
+  cursor: pointer;
 }
 .white_bars {
   color: white;
+  cursor: pointer;
 }
 .navbar {
   float: right;
@@ -219,7 +230,7 @@ button {
   45% { opacity:0; }
   100% { opacity:1; }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 950px) {
   a {
     margin-right: unset;
   }

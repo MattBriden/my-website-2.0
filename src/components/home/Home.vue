@@ -1,6 +1,7 @@
 <template>
   <div id="home">
     <Banner></Banner>
+    <Services></Services>
     <About></About>
     <Portfolio></Portfolio>
     <ContactUs></ContactUs>
@@ -11,6 +12,7 @@
 <script>
 import Banner from '@/components/home/Banner';
 import About from '@/components/home/About';
+import Services from '@/components/home/Services';
 import ContactUs from '@/components/home/ContactUs';
 import Portfolio from "@/components/home/Portfolio";
 
@@ -18,6 +20,7 @@ export default {
   name: 'Home',
   components: {
     Banner,
+    Services,
     About,
     Portfolio,
     ContactUs

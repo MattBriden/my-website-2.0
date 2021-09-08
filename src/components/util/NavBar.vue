@@ -90,7 +90,9 @@ export default {
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       if (el) {
         setTimeout(window.scrollTo({top: y, behavior: 'smooth'}), 0);
-        this.toggleDropdown();
+        if (this.onMobile) {
+          this.toggleDropdown();
+        }
       }
     }
   },

@@ -107,7 +107,16 @@
 import BlogNavBar from '@/components/util/BlogNavBar';
 export default {
   name: 'MLBlog',
-  components: {BlogNavBar}
+  components: {BlogNavBar},
+  head: {
+    title: {
+      inner: 'Machine Learning with Python'
+    },
+    meta: [
+      { property: 'og:image', content: '~@/assets/machinelearning.jpg' },
+      { property: 'og:title', content: 'Machine Learning with Python' }
+    ]
+  },
 }
 </script>
 

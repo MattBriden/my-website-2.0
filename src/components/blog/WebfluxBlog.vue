@@ -148,7 +148,16 @@
 import BlogNavBar from '@/components/util/BlogNavBar';
 export default {
   name: 'WebfluxBlog',
-  components: {BlogNavBar}
+  components: {BlogNavBar},
+  head: {
+    title: {
+      inner: 'Spring Web Flux'
+    },
+    meta: [
+      { property: 'og:image', content: '~@/assets/webflux.png' },
+      { property: 'og:title', content: 'Spring Web Flux' }
+    ]
+  },
 }
 </script>
 

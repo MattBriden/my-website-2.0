@@ -51,6 +51,15 @@ export default {
   components: {
     BlogNavBar
   },
+  head: {
+    title: {
+      inner: 'Development Blog'
+    },
+    meta: [
+      { property: 'og:image', content: '~@/assets/SVGLogo.svg' },
+      { property: 'og:title', content: 'Development Blog' }
+    ]
+  },
   methods: {
     goToBlog(blog) {
       this.$router.push('/blog/' + blog);

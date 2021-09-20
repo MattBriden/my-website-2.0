@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueHead from 'vue-head'
 import VueObserveVisibility from 'vue-observe-visibility';
 import Notifications from 'vue-notification';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -27,6 +28,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueRouter);
 Vue.use(VueObserveVisibility);
 Vue.use(Notifications);
+Vue.use(VueHead);
 
 Vue.config.productionTip = false;
 

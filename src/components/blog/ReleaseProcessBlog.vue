@@ -56,7 +56,16 @@
 import BlogNavBar from '@/components/util/BlogNavBar';
 export default {
   name: 'ReleaseProcessBlog',
-  components: {BlogNavBar}
+  components: {BlogNavBar},
+  head: {
+    title: {
+      inner: 'Trading Functionality for Releasability'
+    },
+    meta: [
+      { property: 'og:image', content: '~@/assets/release.png' },
+      { property: 'og:title', content: 'Trading Functionality for Releasability' }
+    ]
+  },
 }
 </script>
 

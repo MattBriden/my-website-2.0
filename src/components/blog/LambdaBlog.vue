@@ -142,7 +142,16 @@
 import BlogNavBar from '@/components/util/BlogNavBar';
 export default {
   name: 'LambdaBlog',
-  components: {BlogNavBar}
+  components: {BlogNavBar},
+  head: {
+    title: {
+      inner: 'AWS Lambda and EFS Integration'
+    },
+    meta: [
+      { property: 'og:image', content: '~@/assets/filesystem.jpg' },
+      { property: 'og:title', content: 'AWS Lambda and EFS Integration' }
+    ]
+  },
 }
 </script>
 

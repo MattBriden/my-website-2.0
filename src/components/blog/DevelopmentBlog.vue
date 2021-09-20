@@ -9,7 +9,7 @@
     </div>
     <div class="blogs">
       <div class="card" @click="goToBlog('lambda')">
-        <img src="~@/assets/filesystem.jpeg" height="200"/>
+        <img src="~@/assets/filesystem.jpg" height="200"/>
         <h2>AWS Lambda and EFS Integration</h2>
         <h5>June 24, 2021</h5>
         <p>It's often thought that when working with AWS Lambda functions we are limited to 512MB of disk space. This post introduces a solution to work around this limitation by leveraging EFS.</p>
@@ -21,7 +21,7 @@
         <p>A discussion of the importance to be able to release quickly and painlessly, even if that means sacrificing functionality.</p>
       </div>
       <div class="card" @click="goToBlog('ml')">
-        <img src="~@/assets/machinelearning.jpeg"/>
+        <img src="~@/assets/machinelearning.jpg"/>
         <h2>Machine Learning with Python</h2>
         <h5>Mar 2, 2021</h5>
         <p>Machine Learning isn't as intimidating as it sounds, this provides a simple implementation of a random forest classifier using the Python library scikit-learn.</p>

@@ -164,6 +164,7 @@ export default {
   height: calc(100% - 82px);
   position: fixed;
   overflow-x: hidden;
+  max-width: 100%;
 }
 .blog .title {
   text-align: inherit;

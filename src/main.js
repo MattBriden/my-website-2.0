@@ -3,11 +3,15 @@ import VueRouter from 'vue-router';
 import VueObserveVisibility from 'vue-observe-visibility';
 import Notifications from 'vue-notification';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faSun, faChartLine, faFire, faCode, faTools, faPencilRuler, faPlus, faArrowRight, faTasks  } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faBars, faSun, faChartLine, faFire, faCode, faTools, faPencilRuler, faPlus, faArrowRight, faTasks  } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from '@/components/App';
 import router from './router';
 
+library.add(faGithub);
+library.add(faEnvelope);
+library.add(faLinkedin);
 library.add(faBars);
 library.add(faSun);
 library.add(faChartLine);

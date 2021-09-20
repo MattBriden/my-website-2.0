@@ -27,7 +27,7 @@
         </li>
         <span>|</span>
         <li>
-          <a target="_blank" href="https://mattbriden.com" :class="{change_txtcolor: scrollPosition > 100}"><span>Development Blog</span></a>
+          <router-link to="/blog" :class="{change_txtcolor: scrollPosition > 100}"><span>Development Blog</span></router-link>
         </li>
       </ul>
     </div>
@@ -54,7 +54,7 @@
         </li>
         <hr/>
         <li>
-          <a target="_blank" href="https://mattbriden.com"><span>Development Blog</span></a>
+          <router-link to="/blog"><span>Development Blog</span></router-link>
         </li>
       </ul>
     </div>

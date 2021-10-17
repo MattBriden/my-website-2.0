@@ -5,6 +5,7 @@ import LambdaBlog from '@/components/blog/LambdaBlog';
 import MLBlog from '@/components/blog/MLBlog';
 import WebfluxBlog from '@/components/blog/WebfluxBlog';
 import ReleaseProcessBlog from '@/components/blog/ReleaseProcessBlog';
+import PyPiBlog from '@/components/blog/PyPiBlog';
 
 const routes = [
   {
@@ -30,6 +31,10 @@ const routes = [
   {
     path: '/blog/release-process',
     component: ReleaseProcessBlog
+  },
+  {
+    path: '/blog/pypi',
+    component: PyPiBlog
   }
 ]
 

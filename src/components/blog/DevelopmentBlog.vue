@@ -9,6 +9,12 @@
         <p>A blog about interesting technologies and development practices from the helios team.</p>
       </div>
       <div class="blogs">
+        <div class="card" @click="goToBlog('pypi')">
+          <img src="~@/assets/pypi.jpg" height="200"/>
+          <h2>Creating a Private PyPI Repository with AWS</h2>
+          <h5>October 17, 2021</h5>
+          <p>With the emergence of new architecture standards like microservices and serverless its important to be able to keep common code in a single place. This post discusses how to use AWS CodeArtifact as a PyPI repository to store and use private Python packages.</p>
+        </div>
         <div class="card" @click="goToBlog('lambda')">
           <img src="~@/assets/filesystem.jpg" height="200"/>
           <h2>AWS Lambda and EFS Integration</h2>

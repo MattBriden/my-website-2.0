@@ -127,7 +127,7 @@ export default {
 }
 .card {
   background-color: white;
-  margin: 20px 40px 20px 40px;
+  margin: 20px;
   padding: 50px 100px 50px 100px;
   border-radius: 25px;
   text-align: initial;

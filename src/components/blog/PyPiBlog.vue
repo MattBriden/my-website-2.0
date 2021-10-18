@@ -80,8 +80,8 @@ export default {
       inner: 'AWS Lambda and EFS Integration'
     },
     meta: [
-      { property: 'og:image', content: 'https://mattbriden.com/lambda-efs.html' },
-      { property: 'og:title', content: 'PyPI in AWS' }
+      { name: "image", property: 'og:image', content: '~@/assets/pypi.jpg' },
+      { name: "title", property: 'og:title', content: 'PyPI in AWS' }
     ]
   },
 }

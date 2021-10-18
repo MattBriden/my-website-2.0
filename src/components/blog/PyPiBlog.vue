@@ -20,12 +20,12 @@
           </div>
         </div>
         <div class="card">
-          <h3>What is PyPI and why is it important?</h3>
-          <p>
-            <a href="https://pypi.org/">PyPI</a> is short for The Python Package Index and is a repository for third party Python packages. When building a Python application using pip as your package manager typically all the libraries you pull into your project are coming from the default PyPI repository. There are exceptions to this rule, such as if you are using something like <a href="https://docs.conda.io/en/latest/">Conda</a> which provides a package manager and virtual environment, but for this post we will be focusing on projects that use pip. By providing a centralized location to download third party Python libraries PyPI is integral to Python application development.
-          </p>
           <h3>Modern architecture and avoiding duplicate code</h3>
           <p>With the emergence of new standards around software architecture consolidating commonly used code is not as easy as it once was. In monolith applications a common or shared module could be created and imported into whatever files needed it. However, today monliths are frowned upon and logical parts of software are often broken out into their own applications. Developers need a way to still import common code into these standalone applications without having to duplicate the code in each codebase. AWS has created a great solution for this with their <a href="https://aws.amazon.com/codeartifact/">Code Artifact</a> service. Code Artifact gives developers the ability to create their own artifact repositories and <a href="https://aws.amazon.com/blogs/aws/software-package-management-with-aws-codeartifact/">supports many of the most popular package managers</a>. For Python developers this gives us the perfect platform for storing our common code in a way so that it can be used by any Python application running in AWS.</p>
+          <h3>What is PyPI and why is it important?</h3>
+          <p>
+            <a href="https://pypi.org/">PyPI</a> is short for The Python Package Index and is a repository for third party Python packages. When building a Python application typically all the libraries you pull into your project are coming from the default PyPI repository. There are exceptions to this rule, such as if you are using something like <a href="https://docs.conda.io/en/latest/">Conda</a> which provides a package manager <i>and</i> virtual environment, but for this post we will be focusing on projects that use the pip package manager. By providing a centralized location to download third party Python libraries PyPI is integral to Python application development. When developing applications in AWS, Code Artifact can be used as a PyPI repository to store our own private Python packages to be used by any and all of our Python applications running in the cloud.
+          </p>
           <h3>Creating and pushing to a Code Artifact PyPI repository</h3>
           <p>If you have read my past blog posts you probably know I love using Terraform, and in this case Terraform makes creating our PyPI repo incredibly easy. The below code is all that is needed to provision the Code Artifact repository.</p>
           <pre><code>

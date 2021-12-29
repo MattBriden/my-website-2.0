@@ -5,13 +5,13 @@
       <div v-if="this.onMobile" class="featured-projects">
         <div class="am-project" @click="toggleInfo('am-info')">
           <div id="am-info" class="mobile-info">
-            <h2>Amenity Match</h2>
-            <h3>Spring Boot / Vue.js / PostgreSQL / AWS</h3>
+            <h2>Houzzli</h2>
+            <h3>Spring Boot / Vue.js / K8s</h3>
             <div class="view-site">
-              <a target="_blank" href="https://www.amenitymatch.com/">Learn More</a>
+              <a target="_blank" href="https://www.houzzli.com/">Learn More</a>
             </div>
           </div>
-          <img src="~@/assets/amenity-match-logo.svg" height="150px"/>
+          <img src="~@/assets/houzzli.png" height="150px"/>
         </div>
         <div class="fg-project" @click="toggleInfo('fg-info')">
           <div id="fg-info" class="mobile-info">
@@ -37,13 +37,13 @@
       <div v-else class="featured-projects">
         <div class="am-project">
           <div class="info">
-            <h2>Amenity Match</h2>
-            <h3>Spring Boot / Vue.js / PostgreSQL / AWS</h3>
+            <h2>Houzzli</h2>
+            <h3>Spring Boot / Vue.js / K8s</h3>
             <div class="view-site">
-              <a target="_blank" href="https://www.amenitymatch.com/">Learn More</a>
+              <a target="_blank" href="https://www.houzzli.com/">Learn More</a>
             </div>
           </div>
-          <img src="~@/assets/amenity-match-logo.svg" height="150px"/>
+          <img src="~@/assets/houzzli.png" height="150px"/>
         </div>
         <div class="fg-project">
           <div class="info">

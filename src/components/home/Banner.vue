@@ -37,8 +37,7 @@ export default {
 }
 .home-text {
   color: white;
-  bottom: 15%;
-  position: absolute;
+  margin-top: 20vh;
   width: 100%;
   font-size: 30px;
   z-index: 1;

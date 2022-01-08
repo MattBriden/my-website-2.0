@@ -59,13 +59,12 @@ export default {
 #services {
   padding-top: 40px;
   background-color: #e1e1e1;
-  padding-bottom: 40px
 }
 
 .wrapper {
   background-color: white;
-  border-radius: 25px;
-  margin: 40px;
+  border-radius: 8px;
+  margin: 40px 40px 0px 40px;
   padding: 40px;
 }
 .wrapper .our-services {

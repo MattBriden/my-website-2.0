@@ -10,17 +10,24 @@
         For Your Cloud Computing Needs
       </p>
     </div>
+    <div class="contact">
+      <div class="component">
+        <Contact></Contact>
+      </div>
+    </div>
   </div>
 
 </template>
 
 <script>
 import NavBar from '@/components/util/NavBar'
+import Contact from '@/components/util/Contact';
 
 export default {
   name: 'Banner',
   components: {
-    NavBar
+    NavBar,
+    Contact,
   }
 }
 </script>
@@ -38,9 +45,10 @@ export default {
 .home-text {
   color: white;
   margin-top: 20vh;
-  width: 100%;
+  width: 50%;
   font-size: 30px;
   z-index: 1;
+  float: left;
 
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -54,6 +62,22 @@ export default {
 }
 .home-text p {
   margin: 0;
+}
+.component {
+  margin-top: 200px;
+  width: 75%;
+}
+.contact {
+  width: 40%;
+  float: right;
+  height: 100%;
+  vertical-align: middle;
+
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
 }
 @keyframes fadein {
   0% { opacity:0; }
@@ -84,9 +108,13 @@ export default {
   45% { opacity:0; }
   100% { opacity:1; }
 }
-@media screen and (max-width: 600px) {
-  .home-text {
-    bottom: 10%;
+@media screen and (max-width: 1050px) {
+  .home-text, .contact {
+    float: unset;
+    width: 100%;
+  }
+  .contact {
+    display: none;
   }
 }
 </style>

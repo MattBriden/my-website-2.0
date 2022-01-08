@@ -1,8 +1,8 @@
 <template>
   <div id="home">
     <Banner></Banner>
-    <Services></Services>
     <About></About>
+    <Services></Services>
     <Portfolio></Portfolio>
     <ContactUs></ContactUs>
   </div>

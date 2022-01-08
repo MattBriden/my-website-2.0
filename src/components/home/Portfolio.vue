@@ -6,7 +6,7 @@
         <div class="am-project" @click="toggleInfo('am-info')">
           <div id="am-info" class="mobile-info">
             <h2>Houzzli</h2>
-            <h3>Spring Boot / Vue.js / K8s</h3>
+            <h3>Spring Boot / Vue.js / AWS Elastic Kubernetes Service</h3>
             <div class="view-site">
               <a target="_blank" href="https://www.houzzli.com/">Learn More</a>
             </div>
@@ -38,7 +38,7 @@
         <div class="am-project">
           <div class="info">
             <h2>Houzzli</h2>
-            <h3>Spring Boot / Vue.js / K8s</h3>
+            <h3>Spring Boot / Vue.js / AWS Elastic Kubernetes Service</h3>
             <div class="view-site">
               <a target="_blank" href="https://www.houzzli.com/">Learn More</a>
             </div>
@@ -58,7 +58,7 @@
         <div class="symbio-project">
           <div class="info">
             <h2>Parti</h2>
-            <h3>AWS Consultation / AWS AppSync</h3>
+            <h3>AWS Consultation / AWS AppSync / Aurora Serverless</h3>
             <div class="view-site">
               <a target="_blank" href="https://partiofficial.com/services">Learn More</a>
             </div>
@@ -111,7 +111,7 @@ export default {
 
 .wrapper {
   background-color: white;
-  border-radius: 25px;
+  border-radius: 8px;
   margin: 40px;
   padding: 40px;
 }
@@ -125,7 +125,7 @@ export default {
 .fg-project, .am-project, .symbio-project {
   grid-column: span 4;
   position: relative;
-  border-radius: 25px;
+  border-radius: 8px;
   border: solid thin gray;
   margin: 15px;
   height: 258px;
@@ -157,7 +157,7 @@ export default {
 
 .info {
   background-color: black;
-  border-radius: 25px;
+  border-radius: 8px;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -200,7 +200,7 @@ export default {
 
 .mobile-info {
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 25px;
+  border-radius: 8px;
   position: absolute;
   height: 100%;
   width: 100%;

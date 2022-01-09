@@ -6,16 +6,16 @@
       <div class="our-services">
         <div class="chunk">
           <ul>
-            <li><font-awesome-icon icon="code" size="1x" :style="{ color: 'black' }"/><span>Custom Frontend and Backend Development</span></li>
-            <li><font-awesome-icon icon="tools" size="1x" :style="{ color: 'black' }"/><span>Cloud Architecture Design</span></li>
-            <li><font-awesome-icon icon="tasks" size="1x" :style="{ color: 'black' }"/><span>Project Consultation</span></li>
+            <li><font-awesome-icon icon="code" size="1x" :style="{ color: '#75ab38' }"/><span>Custom Frontend and Backend Development</span></li>
+            <li><font-awesome-icon icon="tools" size="1x" :style="{ color: '#75ab38' }"/><span>Cloud Architecture Design</span></li>
+            <li><font-awesome-icon icon="tasks" size="1x" :style="{ color: '#75ab38' }"/><span>Project Consultation</span></li>
           </ul>
         </div>
         <div class="chunk">
           <ul>
-            <li><font-awesome-icon icon="pencil-ruler" size="1x" :style="{ color: 'black' }"/><span>Initial Product Design and Development</span></li>
-            <li><font-awesome-icon icon="arrow-right" size="1x" :style="{ color: 'black' }"/><span>Migration of Legacy Applications to Modern Infrastructure</span></li>
-            <li><font-awesome-icon icon="plus" size="1x" :style="{ color: 'black' }"/><span>Web Application Upgrade and Maintenance</span></li>
+            <li><font-awesome-icon icon="pencil-ruler" size="1x" :style="{ color: '#75ab38' }"/><span>Initial Product Design and Development</span></li>
+            <li><font-awesome-icon icon="arrow-right" size="1x" :style="{ color: '#75ab38' }"/><span>Migration of Legacy Applications to Modern Infrastructure</span></li>
+            <li><font-awesome-icon icon="plus" size="1x" :style="{ color: '#75ab38' }"/><span>Web Application Upgrade and Maintenance</span></li>
           </ul>
         </div>
       </div>
@@ -29,7 +29,8 @@ export default {
   name: 'Services',
   data() {
     return {
-      onMobile: false
+      onMobile: false,
+      pageSeen: true,
     }
   },
   created() {
@@ -45,6 +46,11 @@ export default {
         element.style.display = 'none';
       } else {
         element.style.display = 'block';
+      }
+    },
+    visibilityChanged(isVisible) {
+      if (isVisible) {
+        this.pageSeen = true;
       }
     }
   },
@@ -88,6 +94,13 @@ export default {
 
 .chunk ul li span {
   padding-left: 7px;
+}
+.seen {
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
 }
 @keyframes fadein {
   from { opacity: 0; }

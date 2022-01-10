@@ -11,11 +11,11 @@
         </li>
         <span>|</span>
         <li>
-          <a @click="scrollTo('services', -50)" :class="{change_txtcolor: scrollPosition > 100}"><span>Services</span></a>
+          <a @click="scrollTo('about', -100)" :class="{change_txtcolor: scrollPosition > 100}"><span>About</span></a>
         </li>
         <span>|</span>
         <li>
-          <a @click="scrollTo('about', -100)" :class="{change_txtcolor: scrollPosition > 100}"><span>About</span></a>
+          <a @click="scrollTo('services', -50)" :class="{change_txtcolor: scrollPosition > 100}"><span>Services</span></a>
         </li>
         <span>|</span>
         <li>
@@ -38,11 +38,11 @@
         </li>
         <hr/>
         <li>
-          <a @click="scrollTo('services', -50)"><span>Services</span></a>
+          <a @click="scrollTo('about', -100)"><span>About</span></a>
         </li>
         <hr/>
         <li>
-          <a @click="scrollTo('about', -100)"><span>About</span></a>
+          <a @click="scrollTo('services', -50)"><span>Services</span></a>
         </li>
         <hr/>
         <li>
